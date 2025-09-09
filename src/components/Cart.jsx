@@ -8,11 +8,13 @@ import Box from "./Box"
 import Text from "./Text"
 import Modal from './Modal'
 import Counter from './Counter'
+import { Navigate } from 'react-router'
 
 function Cart() {
 
     const { cart, totalQuantity } = useContext(CartContext)
     const [showModal, setShowModal] = useState(false)
+    const navigate = useNavigate ()
 
     const totalAmount = cart.reduce( (acc, item) => acc + item.prod.amount * item.quantity, 0 )
 
@@ -40,6 +42,11 @@ function Cart() {
                     <Text as='h4'>Total:</Text>
                     <Text as='b'>{`$ ${totalAmount}`}</Text>
                 </Box>
+
+<Box className="d-flex justify-end">
+                <button type="button" className="form__submit btn btn__primary" onClick={()=> navigate("/checkout")}><FontAwesomeIcon icon={faShop} />Comprar</button>
+</Box>    
+
             </Modal>
         </>
     )

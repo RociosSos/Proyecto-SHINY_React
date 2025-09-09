@@ -18,7 +18,7 @@ function ProductGrid() {
             {
                 products.map(
                     prod => 
-                        <Box key={prod.id} className="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+                        <Box key={prod._id} className="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
                             <Card {...prod} />
                         </Box>
                 )

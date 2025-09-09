@@ -5,13 +5,13 @@ const axiosInstance = axios.create({
 })
 
 export const getProducts = async () => {
-    const resp = await axiosInstance.get("/productos")
-    return resp.data
+    const resp = await axiosInstance.get("/products")
+    return resp.data.products
 }
 
 export const postProduct = async body => {
-    const resp = await axiosInstance.post("/productos", body)
-    return resp.data
+    const resp = await axiosInstance.post("/products", body)
+    return resp.data.products
 }
 
 export const postContact = async body => {

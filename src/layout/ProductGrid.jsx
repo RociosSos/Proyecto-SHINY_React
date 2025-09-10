@@ -12,6 +12,7 @@ function ProductGrid() {
             .then( data => setProducts(data))
             .catch( err => console.error(err) )
     }, [])
+console.log(products);
 
     return (
         <Box className="grid">

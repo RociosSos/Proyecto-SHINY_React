@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { initMercadoPago } from '@mercadopago/sdk-react'
 
 
 import App from './App'

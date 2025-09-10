@@ -5,7 +5,7 @@ import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { CartContext } from "../context/CartContext";
 
 import Box from './Box'
-import Text from './Text'
+import MyText from './Text'  // <-- Cambiado a MyText
 
 function Counter({
     product
@@ -37,7 +37,7 @@ function Counter({
     return (
         <Box className="d-flex align-center">
             <button type="button" className="btn btn__primary" onClick={decrement} disabled={counter === 0}><FontAwesomeIcon icon={faMinus} /></button>
-            <Text as="strong" className="ml-5 mr-5">{counter}</Text>
+            <MyText as="strong" className="ml-5 mr-5">{counter}</MyText>
             <button type="button" className="btn btn__primary" onClick={increment}><FontAwesomeIcon icon={faPlus} /></button>
         </Box>
     )

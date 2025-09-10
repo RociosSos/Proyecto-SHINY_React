@@ -12,7 +12,7 @@ function Counter({
 }) {
 
     const { cart, setQuantity } = useContext(CartContext)
-    const prodInCart = cart.find( ({prod}) => prod.id === product.id )
+    const prodInCart = cart.find( ({prod}) => prod._id === product._id )
     const [counter, setCounter] = useState(
         prodInCart?.quantity ||
         0

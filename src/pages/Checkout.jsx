@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import Box from "../components/Box";
 
 function Checkout() {
 
@@ -11,7 +12,8 @@ function Checkout() {
         <Box>
             <Text as='h3'>Productos seleccionados</Text>
             {
-                cart.map(
+
+                cart.map(   
                     ({ prod, quantity }) =>
                         <Box className="d-flex align-center space-between">
                             <Text as='h4'>{prod.name}</Text>
